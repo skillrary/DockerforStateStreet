@@ -20,3 +20,5 @@ systemctl start docker  -- Command to start docker
 systemctl stop docker -- Command to stop docker
 
 systemctl status docker -- Command to check for docker service
+
+wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.40/bin/apache-tomcat-9.0.40.tar.gz
