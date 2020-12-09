@@ -1,0 +1,294 @@
+  1  systemctl status docker
+    2  ps -ef | grep jenkins
+    3  id
+    4  ps -ef | docker
+    5  ps -ef | grep docker
+    6  yum update
+    7  ls -ltr
+    8  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    9  yum install docker-ce docker-ce-cli containerd.io
+   10  systemctl docker start
+   11  systemctl start docker
+   12  systemctl status docker
+   13  systemctl stop docker
+   14  systemctl status docker
+   15  systemctl start docker
+   16  clear
+   17  docker info
+   18  clear
+   19  docker images
+   20  docker ps
+   21  docker info
+   22  systemctl start docker
+   23  ps -ef | grep docker
+   24  systemctl stop docker
+   25  ps -ef | grep docker
+   26  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   27  systemctl start docker
+   28  docker info
+   29  docker images
+   30  docker ps
+   31  clear
+   32  wget
+   33  wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.40/bin/apache-tomcat-9.0.40.tar.gz
+   34  ls -ltr
+   35  tar -zvxf apache-tomcat-9.0.40.tar.gz
+   36  ls -ltr
+   37  cd apache-tomcat-9.0.40/
+   38  ls -ltr
+   39  cd bin
+   40  ls -ltr
+   41  ./startup.sh
+   42  cd ..
+   43  cd conf
+   44  ls -ltr
+   45  vi server.xml
+   46  cd ../bin
+   47  ./shutdown.sh
+   48  ./startup.sh
+   49  cd ls -ltr
+   50  cd ../..
+   51  ls -ltr
+   52  clear
+   53  ls
+   54  cd apache-tomcat-9.0.40/
+   55  cd conf
+   56  ls
+   57  vi server.xml
+   58  cd ..
+   59  cd bin
+   60  ls
+   61  cd ..
+   62  cd conf
+   63  ls -ltr
+   64  cd ..
+   65  systemctl start httpd
+   66  cd conf
+   67  vi httpd.conf
+   68  vi server.xml
+   69  clear
+   70  yum install httpd
+   71  cd ..
+   72  systemctl start httpd
+   73  systemctl status httpd
+   74  clear
+   75  docker images
+   76  docker pull centos
+   77  docker images
+   78  docker pull ubuntu
+   79  docker images
+   80  cd /var/lib/docker/
+   81  ls -ltr
+   82  cd image/
+   83  ls -ltr
+   84  cd overlay2/
+   85  ls
+   86  cd imagedb/
+   87  ls
+   88  cd content
+   89  cd ..
+   90  ls
+   91  cd ..
+   92  'ls
+   93  ls -ltr
+   94  cd con
+   95  ls -ltr
+   96  cd overlay2/
+   97  ls
+   98  cat repositories.json
+   99  cd \
+  100  pwd
+  101  clear
+  102  docker images
+  103  docker run -it -d centos
+  104  docker ps
+  105  docker run -it --name mithuncentos -d centos
+  106  docker ps
+  107  history
+  108  clear
+  109  docker images
+  110  docker ps
+  111  docker rmi centos
+  112  docker run -it -d ubuntu
+  113  docker ps
+  114  docker stop mithuncentos
+  115  docker ps
+  116  docker ps -a
+  117  docker start 81c7d3970827
+  118  docker ps
+  119  clear
+  120  docker ps
+  121  docker exec -d mithuncentos bash
+  122  pwd
+  123  docker exec -d -it mithuncentos bash
+  124  ls
+  125  docker exec -it mithuncentos bash
+  126  clear
+  127  docker ps -a
+  128  docker stop e7103446e2f8 7aa3969f1408 3d64abefbcbb mithuncentos
+  129  docker ps
+  130  docker ps -a
+  131  docker rm e7103446e2f8 7aa3969f1408 mithuncentos youthful_jepsen
+  132  docker ps
+  133  docker ps -a
+  134  docker images
+  135  docker rmi centos ubuntu
+  136  docker images
+  137  clear
+  138  docker pull centos
+  139  docker images
+  140  docker run -it -d centos --name c1
+  141  docker run -it --name c1 -d centos
+  142  docker ps
+  143  docker exec -it c1 bash
+  144  docker ps
+  145  docker run -it --name c2 centos
+  146  docker ps
+  147  docker run -it --name c2 -d centos
+  148  docker ps -a
+  149  docker rm c2
+  150  clear
+  151  docker images
+  152  docker ps
+  153  docker run -it --name c2 -d centos
+  154  docker ps
+  155  docker commit 44adffb9f904 c1image
+  156  docker images
+  157  docker run -it --name c3 -d c1image
+  158  docker ps
+  159  docker exec -it c3 bash
+  160  docker ps
+  161  docker exec -it c3 bash
+  162  docker ps -a
+  163  exit
+  164  clear
+  165  docker ps
+  166  docker exec -it c3 bash
+  167  docker ps
+  168  docker run -it --name c4 -d c1image
+  169  docker exec -it c4 bash
+  170  docker stop c1
+  171  docker commit c1 c1newimage
+  172  docker run -it --name c5 -d c1newimage
+  173  docker ps
+  174  docker exec -it c5 bash
+  175  docker run -it --name c6 --previledged -d c1image
+  176  docker run -it --name c6 -previledged -d c1image
+  177  docker run -it --name c6 previledged=y -d c1image
+  178  docker run --help
+  179  docker run -it --name c6 --priviledged -d c1image
+  180  docker run -it --name c6 --privileged -d c1image
+  181  docker exec -it c6 bash
+  182  docker run -it --name c7 --privileged -d c1image /usr/sbin/init
+  183  docker exec -it c7 bash
+  184  docker exec -it c6 bash
+  185  docker run --help
+  186  docker run -it --cpus=".5" --memory=100m -d centos
+  187  docker ps
+  188  docker exec -it 46b42cd37942 bash
+  189  docker ps -a -l
+  190  docker ps -l
+  191  docker ps --no-trunc
+  192  docker images
+  193  docker stop c4 c5 c6 c7 gifted_hofstadter
+  194  clear
+  195  docker ps
+  196  docker images
+  197  docker ps
+  198  docker start c1
+  199  docker ps
+  200  docker images
+  201  docker exec -it c3 bash
+  202  docker run -it --name c4 -d c1image /usr/sbin/init
+  203  docker run -it --name c9 -d c1image /usr/sbin/init
+  204  docker exec -it c9 bash
+  205  docker ps
+  206  docker ps -a
+  207  docker run -it --name c10 -d c1image /usr/sbin/init
+  208  docker run -it --name c11 --privileged -d c1image /usr/sbin/init
+  209  docker exec -it c11 bash
+  210  docker run --help
+  211  docker commit c1 c1image1
+  212  docker save c1image > c1image.rar
+  213  ls -ltr
+  214  docker images
+  215  docker save c1image > newhttpserver.iso
+  216  ls -ltr
+  217  docker load --input newhttpserver.iso
+  218  docker images
+  219  docker ps -a
+  220  docker stop $(docker container ls -aq)
+  221  docker container
+  222  docker container ls
+  223  docker container ls -a
+  224  docker ps
+  225  docker ps -a
+  226  docker container ls -aq
+  227  docker stop $(docker container ls -aq)
+  228  docker rm $(docker container ls -aq)
+  229  docker ps -a
+  230  docker images
+  231  docker rmi c1image
+  232  docker images
+  233  docker load --input c1image.rar
+  234  docker images
+  235  docker rmi c1image c1newimage c1image1
+  236  docker iamges
+  237  docker images
+  238  docker run -it -d centos
+  239  docker ps
+  240  docker exec -it 5adeddcb9731 bash
+  241  docker ps
+  242  docker commit 5adeddcb9731 skillrary/ssc1image
+  243  docker iamges
+  244  docker images
+  245  docker login
+  246  docker push skillrary/ssc1image
+  247  docker images
+  248  docker rmi skillrary/ssc1image
+  249  docker images
+  250  docker pull skillrary/ssc1image
+  251  docker images
+  252  docker run --help
+  253  docker images
+  254  docker run -it --memory=100m --cpus=".5" -d centos
+  255  docker ps
+  256  docker ps --no-trunc
+  257  docker inspect 401b77dc69dd
+  258  docker stats
+  259  docker images
+  260  docker ps
+  261  docker run -it -p 8000:80 -d centos
+  262  docker ps
+  263  docker exec -it 680cec52952a bash
+  264  docker images
+  265  docker ps -a
+  266  docker stop 680cec52952a 401b77dc69dd 5adeddcb9731
+  267  docker images
+  268  docker rmi skillrary/ssc1image centos
+  269  docker rmi --force centos
+  270  docker images
+  271  docker ps -a
+  272  docker rm 680cec52952a 401b77dc69dd 5adeddcb9731
+  273  docker images
+  274  docker ps
+  275  docker ps -a
+  276  docker pull centos
+  277  docker images
+  278  docker run -it -d centos -p 8888:80
+  279  docker run -p 8888:80 -it -d centos
+  280  docker ps
+  281  docker exec -it 32ddca23bfdb bash
+  282  docker run -p 8888:80 -it --privileged --init -d centos
+  283  docker run -p 9999:80 -it --privileged --init -d centos
+  284  docker exec -it f80c0ddcf9a9346ce0316cea02305f4eb05747ad55650dd7f53721172f707617 bash
+  285  docker run -p 7777:80 -it --privileged  -d centos /usr/sbin/init
+  286  docker exec -it a44301a665df95bb515abef74d0a62161d1381b38d9c655848982ab71921f0fc bash
+  287  docker ps
+  288  docker run -p 6666:80 -it --privileged  -d centos /usr/sbin/init
+  289  docker exec -it 3034a3ae611cf88f6ad87b0c1aee531ea710735929c25ce5d7cfec8bb4bc1c2b bash
+  290  docker ps -a
+  291  docker run -p 8899:80 -it --privileged  -d centos /usr/sbin/init
+  292  docker exec -it ae4aa476129e1a4792e55f0734a47a586039f0cf58c3cb582e9741ae2a64b594 bash
+  293  docker ps
+  294  docker exec --help
