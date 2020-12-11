@@ -100,10 +100,10 @@ docker update --cpu-shares 512 -m 300M <containerid/name>  --> After creating th
 # Kubernetes Installation
 
 
-1. mkdir /etc/docker
+### 1. mkdir /etc/docker
 
 
-2. Create daemon.json 
+### 2. Create daemon.json 
 
 cat <<EOF | sudo tee /etc/docker/daemon.json
 {
@@ -119,17 +119,17 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 }
 EOF
 
-3. mkdir -p /etc/systemd/system/docker.service.d
+### 3. mkdir -p /etc/systemd/system/docker.service.d
 
-4. Execute following command
+### 4. Execute following command
 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
-5. systemctl enable docker
+### 5. systemctl enable docker
 
 
-6. Create Kubernetes repo
+### 6. Create Kubernetes repo
 
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -142,17 +142,17 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 exclude=kubelet kubeadm kubectl
 EOF
 
-7. Execute following commands
+### 7. Execute following commands
 sudo setenforce 0
 sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
-8. Install Kubernetes
+### 8. Install Kubernetes
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
-9. Enable kubelet service
+### 9. Enable kubelet service
 systemctl enable --now kubelet
 
-10. Check the version after successful installation
+### 10. Check the version after successful installation
 
 kubeadm version
 kubectl version
