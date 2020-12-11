@@ -99,6 +99,7 @@ docker update --cpu-shares 512 -m 300M <containerid/name>  --> After creating th
 
 # Kubernetes Installation
 
+## Following instructions from link https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
 ### 1. mkdir /etc/docker
 
